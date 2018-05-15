@@ -1,6 +1,7 @@
 #include "map_mtm.h"
 #include <stdlib.h>
 #include <malloc.h>
+#include <stdbool.h>
 
 #define KEYS_ARE_EQUAL 0
 
