@@ -107,3 +107,27 @@ List CoolElements(List list[], int SizeOfArr)
     return newList;
 }
 
+/**
+* mergeSort - sorts an array of ADT
+*
+* @param greaterThen - Function pointer to be used for comparing the elements, returning true if element in place
+* j is bigger then the following element
+* @param swapElem - Function pointer to be used for swapping the elements in the array
+* @param arr - array of ADT
+* @param size - the size of the array.
+*/
+void mergeSort(void** arr, int size , bool (*greaterThen)(void*)(void*), void (*swapElem)(void*)(void*))
+{
+    for (int i =0; i< size-1; i++)
+    {
+        for (int j =0; j< size-1-i; j++)
+        {
+            if (greaterThen((arr[j], arr[j+1])))
+            {
+                swapElem((arr[j], arr[j+1]));
+            }
+        }
+    }
+}
+
+
